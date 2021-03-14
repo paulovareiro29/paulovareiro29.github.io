@@ -381,11 +381,11 @@ INDEX
 }
 
 #our-products .carrossel .carrossel-slider .slide-counter .circle {
-  content: url("/src/images/icons/circle/20_empty_circle.svg");
+  content: url("../images/icons/circle/20_empty_circle.svg");
 }
 
 #our-products .carrossel .carrossel-slider .slide-counter .circle.full {
-  content: url("/src/images/icons/circle/20_full_circle.svg");
+  content: url("../images/icons/circle/20_full_circle.svg");
 }
 
 /* ABOUT US */
