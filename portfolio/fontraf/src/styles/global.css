@@ -1,0 +1,194 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Nunito Sans;
+  letter-spacing: 0.06em;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+header,
+main,
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 1440px;
+  background: #222222;
+}
+
+.container {
+  width: 100%;
+  min-width: 1440px;
+  max-width: 1920px;
+
+  box-sizing: border-box;
+}
+
+.button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #f2890d;
+  border: 0;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+
+  color: #ffffff;
+
+  box-sizing: border-box;
+
+}
+
+.button:hover{
+  background-color: #df800c;
+}
+
+.button .button-icon {
+  margin-left: 10px;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+
+header #navbar {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 140px 0px 140px;
+  box-sizing: border-box;
+}
+
+header #navbar nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+header #navbar nav a {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  color: black;
+
+  transition: color 0.15s ease;
+}
+
+header #navbar nav a:not(:first-child) {
+  margin-left: 42px;
+}
+
+header #navbar nav a:hover {
+  color: #f2890d;
+}
+
+/* MAIN */
+.section-title hr {
+  margin: 0;
+  display: block;
+  width: 50%;
+  height: 3px;
+  border: 0;
+  border-top: 3px solid white;
+}
+
+.section-title h1 {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 65px;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+}
+
+footer {
+  background: #292929;
+  box-shadow: 0px 0px 46px 40px rgba(0, 0, 0, 0.25);
+}
+
+footer .container {
+  padding: 26px 140px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .container .company-name {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+}
+
+footer .container .footer-content {
+  display: flex;
+  align-items: center;
+}
+
+footer .container .footer-content > a.button {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: #ffffff;
+
+  padding: 10px 20px;
+
+  margin: 0px 38px;
+}
+
+footer .container .footer-content > a.button > img {
+  margin-left: 10px;
+}
+
+footer .container .footer-content .socials >:not(:first-child){
+  margin-left: 16px;
+}
+
+footer .container .footer-content .socials img {
+  width: 42px;
+}
