@@ -1,0 +1,25 @@
+@mixin centerAbsolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+@mixin overlay {
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: #2B2A28;
+        mix-blend-mode: multiply;
+        opacity: 0.33;
+
+        z-index: -1;
+    }
+}

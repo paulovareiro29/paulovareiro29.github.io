@@ -1,0 +1,45 @@
+@import '../mixins/breakpoints';
+
+.footer {    
+    border-top: 1px solid var(--background-tertiary);
+    min-height: 480px;
+
+    &-logo {
+        margin: 40px 0px 32px;
+        height: 60px;
+
+        @include sm {
+            height: 36px;
+            margin: 32px 0px;
+        }
+    }
+
+    &-links {
+
+        @include sm {
+            >* {
+                &:not(:last-child) {
+                    // margin-bottom: 16px;
+
+                }
+            }
+        }
+
+        h5 {
+            margin-bottom: 8px !important;
+        }
+    }
+
+    &-horario {
+        >*:not(:last-child, :first-child) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.bottom-bar {
+    border-top: 1px solid var(--background-tertiary);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
