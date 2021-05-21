@@ -211,6 +211,11 @@
                         opacity: 1
                     }
 
+                    >img {
+                        min-width: 110%;
+                        min-height: 110%;
+                    }
+
                 }
 
                 @include overlay;
@@ -230,6 +235,9 @@
 
                     min-width: 100%;
                     min-height: 100%;
+
+                    transition: min-width var(--transition-time), min-height var(--transition-time);
+
                 }
 
                 >p {

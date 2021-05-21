@@ -69,7 +69,8 @@ body {
 
 
 
-p, span {
+p,
+span {
     >a {
         display: inline;
     }
@@ -140,27 +141,27 @@ p, span {
     }
 
     &-secondary {
-        background-color: var(--secondary)!important;
+        background-color: var(--secondary) !important;
     }
 
     &-neutral {
-        background-color: var(--neutral)!important;
+        background-color: var(--neutral) !important;
     }
 
     &-danger {
-        background-color: var(--danger)!important;
+        background-color: var(--danger) !important;
     }
 
     &-success {
-        background-color: var(--success)!important;
+        background-color: var(--success) !important;
     }
 
     &-caution {
-        background-color: var(--caution)!important;
+        background-color: var(--caution) !important;
     }
 
     &-info {
-        background-color: var(--info)!important;
+        background-color: var(--info) !important;
     }
 
     &-text-primary {
@@ -629,14 +630,14 @@ a {
                 left: -15px;
             }
         }
-    } 
+    }
 }
 
 
 .footer-widget {
     &-content {
         >* {
-            &:not(:last-child){
+            &:not(:last-child) {
                 margin-bottom: 4px;
             }
         }
@@ -654,7 +655,7 @@ a {
             display: flex;
             align-items: center;
 
-            &::after{
+            &::after {
                 content: url('../images/icons/plus.svg');
                 position: absolute;
                 right: 0;
@@ -666,7 +667,7 @@ a {
 
         &.open {
             .footer-widget-label {
-                &::after{
+                &::after {
                     content: url('../images/icons/minus.svg');
                 }
             }

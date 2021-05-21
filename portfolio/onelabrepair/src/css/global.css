@@ -403,6 +403,10 @@
 .section-galeria .galeria-item:hover > p {
   opacity: 1;
 }
+.section-galeria .galeria-item:hover > img {
+  min-width: 110%;
+  min-height: 110%;
+}
 .section-galeria .galeria-item::after {
   content: "";
   position: absolute;
@@ -428,6 +432,7 @@
   z-index: -1;
   min-width: 100%;
   min-height: 100%;
+  transition: min-width var(--transition-time), min-height var(--transition-time);
 }
 .section-galeria .galeria-item > p {
   font-weight: 900;
@@ -675,7 +680,8 @@ body * {
   }
 }
 
-p > a, span > a {
+p > a,
+span > a {
   display: inline;
 }
 
