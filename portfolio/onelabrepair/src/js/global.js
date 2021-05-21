@@ -232,17 +232,24 @@ function loadReviews() {
   //   },
   // });
 
-  $.getJSON(
-    API_URL,
-    {
-      tags: placeid,
-      tagmode: "any",
-      format: "json",
-    },
-    function (data) {
-      alert(data);
+  var settings = {
+    'cache': false,
+    'dataType': "jsonp",
+    "async": true,
+    "crossDomain": true,
+    "url": API_URL,
+    "method": "GET",
+    "headers": {
+        "accept": "application/json",
+        "Access-Control-Allow-Origin":"*"
     }
-  );
+  }
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+
+  });
+}
 
   reviews.forEach((review) => {
     let rating = "";
