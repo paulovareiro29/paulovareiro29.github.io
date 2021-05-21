@@ -1,5 +1,5 @@
-
 @import '../mixins/breakpoints';
+@import '../mixins/mixins';
 
 .section {
     padding: 80px 0px 40px;
@@ -19,7 +19,7 @@
             position: absolute;
             bottom: -24px;
             left: 0;
-            
+
             width: 152px;
             height: 2px;
             background: var(--secondary);
@@ -27,7 +27,7 @@
 
         &-center {
             text-align: center;
-            
+
             &::after {
                 left: 50%;
 
@@ -38,16 +38,214 @@
 }
 
 .section {
-    &-hero {
+
+    &-hero,
+    &-small-hero {
         padding: 0;
     }
+
+    &-small-hero {
+        position: relative;
+        height: 280px;
+        overflow: hidden;
+
+        @include overlay;
+
+        @include sm {
+            height: 320px;
+        }
+
+        &-background {
+            @include centerAbsolute;
+            z-index: -1;
+
+            min-width: 100%;
+            min-height: 100%;
+
+        }
+
+        >.container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            height: 100%;
+
+            h3 {
+                margin-top: 16px !important;
+                max-width: 436px;
+            }
+        }
+    }
+
+    &-textpage {
+        padding: 80px 0px 120px;
+
+        @include sm {
+            padding: 40px 0px 60px;
+        }
+
+        .textpage-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                color: var(--text-primary);
+            }
+
+            >:not(:last-child) {
+                margin-bottom: 16px !important;
+            }
+        }
+
+        .textpage-images {
+            @include sm {
+                padding-top: 32px;
+            }
+
+            >img {
+                width: 100%;
+
+                filter: drop-shadow(0px 0px 32px rgba(0, 0, 0, 0.25));
+                border-radius: var(--border-radius);
+            }
+        }
+    }
+
+    &-contactos {
+        padding: 80px 0px 120px;
+
+        @include sm {
+            padding: 40px 0px 60px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+
+            >img {
+                width: 64px;
+                height: 64px;
+            }
+
+            &-title {
+                margin: 12px 0px 8px !important;
+                font-weight: 900;
+                font-size: 32px;
+                line-height: 40px;
+                color: var(--primary);
+
+                text-align: center;
+
+                @include sm {
+                    font-size: 24px;
+                    line-height: 30px;
+
+                    margin: 6px 0px 4px !important;
+                }
+            }
+        }
+    }
+
+    &-map {
+        padding: 0;
+
+        #map {
+            display: block;
+            height: 300px;
+            width: 100%;
+        }
+
+    }
+
+
+    &-galeria {
+        padding: 80px 0px 120px;
+
+        @include sm {
+            padding: 40px 0px 60px;
+        }
+
+        .galeria {
+            &-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+
+                column-gap: 32px;
+                row-gap: 32px;
+
+                @include md {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @include sm {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            &-item {
+                position: relative;
+                overflow: hidden;
+
+                height: 224px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                cursor: pointer;
+
+                &:hover {
+                    &:after {
+                        opacity: 0.33;
+                    }
+
+                    >p {
+                        opacity: 1
+                    }
+
+                }
+
+                @include overlay;
+
+                &:after {
+                    opacity: 0;
+                    transition: opacity var(--transition-time);
+                }
+
+
+                >img {
+                    position: absolute;
+
+                    @include centerAbsolute;
+
+                    z-index: -1;
+
+                    min-width: 100%;
+                    min-height: 100%;
+                }
+
+                >p {
+                    font-weight: 900;
+                    font-size: 32px;
+                    line-height: 40px;
+
+                    text-align: center;
+
+
+                    color: var(--white);
+
+                    opacity: 0;
+                    transition: opacity var(--transition-time);
+                }
+            }
+        }
+    }
 }
-
-
-
-
-
-
-
-
-

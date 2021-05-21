@@ -4,13 +4,16 @@
     border-top: 1px solid var(--background-tertiary);
     min-height: 480px;
 
+    >.container {
+        margin: 40px auto;
+    }
+
     &-logo {
-        margin: 40px 0px 32px;
+        margin: 0px 0px 32px;
         height: 60px;
 
         @include sm {
             height: 36px;
-            margin: 32px 0px;
         }
     }
 

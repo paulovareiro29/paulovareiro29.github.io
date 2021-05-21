@@ -116,7 +116,6 @@ function loadFooterWidget() {
     if ($(window).width() <= 768) {
       const parent = $(e.target).parents(".footer-widget");
       $(parent).toggleClass("open");
-      console.log(parent);
 
       $(parent).children(".footer-widget-content").animate(
         {
@@ -128,28 +127,55 @@ function loadFooterWidget() {
   });
 }
 
+
+
 /**  COSTUM  */
 function loadNavbar() {
   $("#overlay").hide();
   $(".hoverable-container").hide();
   $(".navbar-mobile-navigation").hide();
 
+  function showHoverable(parent) {
+    $(parent).children(".hoverable-label").addClass("color-secondary");
+    $(parent).children(".hoverable-container").show();
+
+    setTimeout(() => {
+      $(parent).addClass("hovering");
+    }, 50);
+  }
+
+  function hideHoverable(parent) {
+    $(parent).removeClass("hovering");
+    $(parent).children(".hoverable-label").removeClass("color-secondary");
+    $(parent).children(".hoverable-container").hide();
+  }
+
   $(".hoverable-label").mouseenter((e) => {
     const parent = $(e.target).parents(".hoverable-link");
 
-    $(parent).children(".hoverable-label").addClass("color-secondary");
-    $(parent).children(".hoverable-container").show();
+    showHoverable(parent);
   });
 
   $(".hoverable-link").mouseleave((e) => {
     let parent = $(e.target).parents(".hoverable-link");
     if (!parent.length) parent = $(e.target);
 
-    $(parent).children(".hoverable-label").removeClass("color-secondary");
-    $(parent).children(".hoverable-container").hide();
+    hideHoverable(parent);
   });
 
   /** MOBILE */
+  $(".hoverable-label").click((e) => {
+    const parent = $(e.target).parents(".hoverable-link");
+    
+    if ($(parent).hasClass("hovering")) {
+      hideHoverable(parent);
+      $("#overlay").hide();
+    } else {
+      showHoverable(parent);
+      $("#overlay").show();
+    }
+  });
+
   $(".hoverable-label").mouseenter((e) => {
     const parent = $(e.target).parents(".hoverable-link");
 

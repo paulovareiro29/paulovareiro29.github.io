@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- STYLES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="src/css/global.css">
+    <!-- END STYLES -->
+
+    <!-- DEV -->
+    <script src="src/js/plugins/includeHTML.js"></script>
+    <title>OnelabRepair</title>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="container d-flex justify-content-between">
+            <div class="topbar-contacts">
+                <span>
+                    <img class="icon" src="src/images/icons/phone.svg" alt="">
+                    <a href="tel:+351912720814">+351 912 720 814</a>
+                </span>
+                <span>
+                    <img class="icon" src="src/images/icons/envelope.svg" alt="">
+                    <a href="mailto:onelabrepair@gmail.com">onelabrepair@gmail.com</a>
+                </span>
+            </div>
+            <div class="topbar-socials">
+                <a href="#"><img class="icon" src="src/images/icons/facebook.svg" alt=""></a>
+                <a href="#"><img class="icon" src="src/images/icons/instagram.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <header id="header" class="sticky-top">
+        <script>
+            includeHTML('header.html', document.getElementById('header'));
+        </script>
+    </header>
+
+    <main>
+        <section class="section section-small-hero">
+            <img class="section-small-hero-background" src="src/images/heros/contactos.png" alt="">
+            <div class="container">
+                <h1 class="color-white text-center">CONTACTOS</h1>
+                <h3 class="color-white text-center">Precisa de um especialista? Não hesite em contactar-nos!</h3>
+            </div>
+        </section>
+
+        <section class="section section-contactos">
+            <div class="container">
+                <div class="row">
+                    <div class="section-contactos-item col-12 col-md-4">
+                        <img src="src/images/icons/home.svg" alt="">
+                        <p class="section-contactos-item-title">Visite-nos</p>
+                        <p class="color-text-primary text-center">Rua de Entrecampos, 55 <br> 1700-157 Lisboa</p>
+                    </div>
+                    <div class="section-contactos-item col-12 col-md-4">
+                        <img src="src/images/icons/phone.svg" alt="">
+                        <p class="section-contactos-item-title">Ligue para nós</p>
+                        <p class="color-text-primary text-center">
+                            <a href="tel:+351912720814" class="color-text-primary">+351 912 720 814</a><br>
+                            <a href="tel:+351215810638" class="color-text-primary">+351 215 810 638</a>
+                        </p>
+                    </div>
+                    <div class="section-contactos-item col-12 col-md-4">
+                        <img src="src/images/icons/envelope.svg" alt="">
+                        <p class="section-contactos-item-title">Envie um E-mail</p>
+                        <p class="color-text-primary text-center">
+                            <a href="mailto:onelabrepair@gmail.com"
+                                class="color-text-primary">onelabrepair@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-map">
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <script>
+            includeHTML('footer.html', document.getElementById('footer'));
+        </script>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="src/js/plugins/jquery.js"></script>
+    <script src="src/js/plugins/gmap3.min.js"></script>
+
+    <!-- API = AIzaSyA6RRUajot8oUraY4QAhHZgZ4CXaCQDPLs -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=&region=PT"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+    <script src="src/js/global.js"></script>
+
+
+    <script>
+        let center = [38.7481412, -9.1474733];
+        $("#map")
+            .gmap3({
+                center: center,
+                zoom: 17,
+                mapId: "ceabb85d3bd2390d"
+            })
+            .marker({
+                position: center,
+                title: "OnelabRepair"
+            });
+    </script>
+
+</body>
+
+</html>

@@ -20,9 +20,10 @@
         &.slick-active {
             >.hero-carousel-item-background {
                 min-width: 200%;
+                min-height: 200%;
                 opacity: 1;
 
-                transition: min-width 10s, opacity 1s;
+                transition: min-width 10s, min-height 10s, opacity 1s;
             }
         }
 
@@ -32,7 +33,7 @@
         }
 
         &-background {
-            transition: min-width 1s, opacity 1s;
+            transition: min-width 1s, min-height 1s, opacity 1s;
             opacity: 0;
             @include centerAbsolute;
 
