@@ -127,8 +127,6 @@ function loadFooterWidget() {
   });
 }
 
-
-
 /**  COSTUM  */
 function loadNavbar() {
   $("#overlay").hide();
@@ -166,7 +164,7 @@ function loadNavbar() {
   /** MOBILE */
   $(".hoverable-label").click((e) => {
     const parent = $(e.target).parents(".hoverable-link");
-    
+
     if ($(parent).hasClass("hovering")) {
       hideHoverable(parent);
       $("#overlay").hide();
@@ -222,6 +220,30 @@ for (let i = 0; i < 5; i++) {
 }
 
 function loadReviews() {
+  var API_KEY = "AIzaSyA6RRUajot8oUraY4QAhHZgZ4CXaCQDPLs";
+  var placeid = "ChIJpTihYa4zGQ0R16_dy360Iqc";
+  var API_URL = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=${API_KEY}`;
+
+  // $.ajax({
+  //   url: "https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJpTihYa4zGQ0R16_dy360Iqc&key=AIzaSyA6RRUajot8oUraY4QAhHZgZ4CXaCQDPLs",
+  //   headers: { Accept: "application/json", "Access-Control-Allow-Origin": "*" },
+  //   success: function (result) {
+  //     console.log(result);
+  //   },
+  // });
+
+  $.getJSON(
+    API_URL,
+    {
+      tags: placeid,
+      tagmode: "any",
+      format: "json",
+    },
+    function (data) {
+      alert(data);
+    }
+  );
+
   reviews.forEach((review) => {
     let rating = "";
 
