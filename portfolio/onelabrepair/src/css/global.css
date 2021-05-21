@@ -605,6 +605,14 @@
   transform: scale(var(--scale-size));
 }
 
+.review-photo {
+  width: 56px;
+  height: 56px;
+}
+.review-photo > img {
+  width: 100%;
+  height: 100%;
+}
 .review-item {
   padding: 32px;
 }

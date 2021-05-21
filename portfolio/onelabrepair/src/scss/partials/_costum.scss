@@ -107,6 +107,16 @@
 
 
 .review {
+    &-photo {
+        width: 56px;
+        height: 56px;
+
+        >img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     &-item {
         padding: 32px;
 
