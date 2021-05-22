@@ -212,68 +212,68 @@ function loadReviews() {
   var placeid = "ChIJpTihYa4zGQ0R16_dy360Iqc";
   var API_URL = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=${API_KEY}`;
 
-  var service = new google.maps.places.PlacesService(
-    document.getElementById("map")
-  );
-  service.getDetails(
-    {
-      placeId: "ChIJpTihYa4zGQ0R16_dy360Iqc",
-    },
-    function (place, status) {
-      let reviews = place.reviews;
+  try {
+    var service = new google.maps.places.PlacesService(
+      document.getElementById("map")
+    );
+    service.getDetails(
+      {
+        placeId: "ChIJpTihYa4zGQ0R16_dy360Iqc",
+      },
+      function (place, status) {
+        let reviews = place.reviews;
 
-      Object.values(reviews).forEach((review) => {
-        let rating = "";
+        Object.values(reviews).forEach((review) => {
+          let rating = "";
 
-        review.rating = parseInt(review.rating);
+          review.rating = parseInt(review.rating);
 
-        for (let i = 0; i < review.rating; i++) {
-          rating += `<img src="src/images/icons/star-filled.svg" alt="">`;
-        }
-
-        if (review.rating < 5)
-          for (let i = 0; i < 5 - review.rating; i++) {
-            rating += `<img src="src/images/icons/star-nofilled.svg" alt="">`;
+          for (let i = 0; i < review.rating; i++) {
+            rating += `<img src="src/images/icons/star-filled.svg" alt="">`;
           }
 
-        console.log($(".reviews.carousel"));
+          if (review.rating < 5)
+            for (let i = 0; i < 5 - review.rating; i++) {
+              rating += `<img src="src/images/icons/star-nofilled.svg" alt="">`;
+            }
 
-        $(".reviews.carousel").slick(
-          "slickAdd",
-          `
-        <div class="review-item">
-          <div class="review-item-wrapper">
-            <div class="review-photo">
-              <img src="${review.profile_photo_url}" alt="">
+          $(".reviews.carousel").slick(
+            "slickAdd",
+            `
+          <div class="review-item">
+            <div class="review-item-wrapper">
+              <div class="review-photo">
+                <img src="${review.profile_photo_url}" alt="">
+              </div>
+              <h5 class="review-name text-center">${review.author_name}</h5>
+              <div class="rating d-flex">
+                ${rating}
+              </div>
+              <p class="text-center color-text-secondary">${review.text}</p>
             </div>
-            <h5 class="review-name text-center">${review.author_name}</h5>
-            <div class="rating d-flex">
-              ${rating}
-            </div>
-            <p class="text-center color-text-secondary">${review.text}</p>
           </div>
-        </div>
-        `
-        );
+          `
+          );
 
-        $(".reviews.carousel").each(function (index, element) {
-          $(element)
-            .slick("unslick")
-            .slick({
-              infinite: true,
-              dots: $(element).attr("data-dots") || true,
-              fade: $(element).attr("data-fade") || false,
-              arrows: $(element).attr("data-arrows") || true,
-              prevArrow: `<button type="button" class="carousel-prev"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16.9427 23.0574L11.2187 17.3334H24V14.6667H11.2187L16.9427 8.94271L15.0573 7.05737L6.11465 16L15.0573 24.9427L16.9427 23.0574Z" fill="#FFCC01"/>
-            </svg>
-            </button>`,
-              nextArrow: `<button type="button" class="carousel-next"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.0573 23.0574L16.9427 24.9427L25.8853 16L16.9427 7.05737L15.0573 8.94271L20.7813 14.6667H8V17.3334H20.7813L15.0573 23.0574Z" fill="#FFCC01"/>
-            </svg></button>`,
-            });
+          $(".reviews.carousel").each(function (index, element) {
+            $(element)
+              .slick("unslick")
+              .slick({
+                infinite: true,
+                dots: $(element).attr("data-dots") || true,
+                fade: $(element).attr("data-fade") || false,
+                arrows: $(element).attr("data-arrows") || true,
+                prevArrow: `<button type="button" class="carousel-prev"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.9427 23.0574L11.2187 17.3334H24V14.6667H11.2187L16.9427 8.94271L15.0573 7.05737L6.11465 16L15.0573 24.9427L16.9427 23.0574Z" fill="#FFCC01"/>
+              </svg>
+              </button>`,
+                nextArrow: `<button type="button" class="carousel-next"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.0573 23.0574L16.9427 24.9427L25.8853 16L16.9427 7.05737L15.0573 8.94271L20.7813 14.6667H8V17.3334H20.7813L15.0573 23.0574Z" fill="#FFCC01"/>
+              </svg></button>`,
+              });
+          });
         });
-      });
-    }
-  );
+      }
+    );
+  } catch (err) {}
 }
