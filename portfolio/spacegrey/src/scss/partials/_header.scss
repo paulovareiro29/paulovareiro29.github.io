@@ -1,0 +1,241 @@
+@import '../mixins/breakpoints';
+
+.topbar {
+    position: relative;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    height: 56px;
+
+    background: var(--neutral);
+
+    border-bottom: 1px solid var(--border-color);
+
+    @include sm {
+        height: 40px;
+    }
+
+    .icon {
+        @include sm {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &-contacts {
+        display: flex;
+
+        @include xs {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        >* {
+            display: flex;
+            align-items: center;
+
+            white-space: nowrap;
+
+            &:not(:last-child) {
+                margin-right: 80px;
+
+                @include xs {
+                    margin-right: 0px;
+                }
+            }
+
+            .icon {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &-socials {
+        display: flex;
+
+        @include xs {
+            display: none;
+        }
+
+        >* {
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+    }
+
+
+}
+
+#header {
+    // background: var(--white);
+
+    border-bottom: 1px solid var(--border-color);
+
+    z-index: 998;
+}
+
+.navbar {
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+
+
+    background: rgba(24, 24, 24, 0.80);
+
+
+
+    >.container {
+        height: 120px;
+
+        @include sm {
+            height: 80px;
+        }
+    }
+
+    &-logo {
+        >img {
+            height: 60px;
+
+            @include sm {
+                height: 34px;
+            }
+        }
+    }
+
+    &-navigation {
+        display: flex;
+
+        height: 100%;
+
+        .hoverable-link {
+            position: relative;
+        }
+
+        .hoverable-container {
+            top: calc(100% - 32px);
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            min-width: 160px;
+
+
+            background: rgba(24, 24, 24, 0.97);
+
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+
+            >* {
+                white-space: nowrap;
+                padding: 8px 16px;
+
+                &:not(:last-child) {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 50%;
+                        left: 25%;
+                        top: 100%;
+
+
+                        // border-bottom: 1px solid var(--border-color);
+
+                    }
+                }
+            }
+        }
+
+        >* {
+            display: flex;
+            align-items: center;
+
+            height: 100%;
+
+            &:not(:last-child) {
+                margin-right: 32px;
+
+                @include md {
+                    margin-right: 16px;
+                }
+            }
+        }
+
+        @include md {
+            display: none;
+        }
+    }
+
+
+
+    &-mobile {
+        display: none;
+
+        @include md {
+            display: block;
+        }
+
+        &-navigation {
+            position: absolute;
+            top: 100%;
+            left: 0;
+
+            width: 100%;
+            min-width: 100%;
+            min-height: 547px;
+
+            background: rgba(24, 24, 24, 0.97);
+
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+
+            padding: 32px 0px;
+
+            .dropdown {
+                padding: 0px;
+            }
+
+            >.container {
+                width: 100%;
+
+                >* {
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.hoverable {
+
+
+    &-container {
+        position: absolute;
+
+    }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+
+    background: rgba(24, 24, 24, 0.8);
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+}
