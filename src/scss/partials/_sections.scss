@@ -1,0 +1,389 @@
+@import '../mixins/breakpoints';
+
+.section {
+    padding: 80px 0px 120px;
+
+    &-fullpage {
+        min-height: 100vh;
+    }
+}
+
+
+#landing {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.section {
+    &-landing {
+
+        .landing-socials {
+            margin-top: 8px;
+            display: flex;
+
+            >:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+
+            >.button {
+                margin-top: 16px;
+            }
+
+            // margin-bottom: 25vh;
+
+        }
+
+        &-background-text {
+            position: absolute;
+            white-space: nowrap;
+            right: 32px;
+
+            color: var(--text-secondary);
+            opacity: 0.1;
+            font-size: 200px;
+
+            transform: rotate(-22.5deg);
+
+            z-index: -1;
+
+            @include sm {
+                font-size: 100px;
+                right: 0;
+                top: 40%;
+            }
+        }
+    }
+
+    &-about {
+        .about {
+            &-content {
+                position: relative;
+
+                p {
+                    text-align: justify;
+                }
+
+                .background-icon {
+                    display: flex;
+                    justify-content: center;
+
+                    >img {
+                        width: 100%;
+                        max-width: 400px;
+                    }
+
+                    @include md {
+                        position: absolute;
+                        z-index: -1;
+
+                        top: 0;
+                        right: 0;
+
+                        width: fit-content;
+
+                        >img {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-work {
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 48px;
+            row-gap: 48px;
+
+            @include sm {
+                grid-template-columns: 1fr;
+                column-gap: 24px;
+                row-gap: 24px;
+
+            }
+        }
+    }
+
+    &-skills {
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+            column-gap: 16px;
+            row-gap: 16px;
+
+            @include breakpoint(1024px){
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include sm {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    &-contacts {
+        padding-bottom: 200px;
+
+        
+        >.container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >p {
+                color: var(--text-secondary);
+                width: 50%;
+    
+                margin-bottom: 60px;
+
+                @include sm {
+                    width: 75%;
+
+                    margin-bottom: 32px;
+                }
+            }
+
+            >* {
+                text-align: center;
+            }
+    
+            >h2 {
+                margin-bottom: 32px;
+
+                @include sm {
+                    margin-bottom: 16px;
+                }
+            }    
+        }
+        
+        
+    }
+}
+
+.skill {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #F5F5F5;
+
+    box-shadow: 0px 4px 20px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    padding-top: 32px;
+    padding-bottom: 16px;
+
+    padding: 32px 32px 16px 32px;
+
+    min-height: 212px;
+
+    transition: transform var(--transition-time), background-color var(--transition-time);
+
+
+    &:hover {
+        background: #fff;
+        transform: translateY(-16px);
+    }
+
+    @include sm {
+        padding: 16px;
+        min-height: 106px;
+    }
+
+    &-image {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        >img {
+            height: 100%;
+            max-width: 100%;
+
+            margin: auto;
+        }
+
+        margin-bottom: 16px;
+    }
+
+    &-name {
+        text-align: center;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 40px;
+
+        margin-bottom: 0;
+
+        @include sm {
+            font-size: 16px;
+
+            line-height: 32px;
+        }
+
+    }
+}
+
+.project {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px 32px 16px 32px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 4px 20px -4px rgba(0, 0, 0, 0.25);
+
+    border-radius: 8px;
+
+    min-height: 190px;
+    overflow: hidden;
+
+    transition: transform var(--transition-time);
+
+    &:hover {
+        transform: translateY(-16px);
+    }
+
+    @include sm {
+        padding: 16px 16px 8px 16px;
+        min-height: 95px;
+    }
+
+    &-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 100%;
+
+        background: #000;
+    }
+
+    h6 {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 40px;
+        margin-bottom: 0;
+
+        @include sm {
+            font-size: 16px;
+
+        }
+    }
+
+    p {
+        font-size: 16px;
+        color: var(--text-secondary);
+        margin-bottom: 0;
+
+        @include sm {
+            font-size: 14px;
+        }
+    }
+
+
+    &-link {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+
+        >:first-child {
+            margin-top: 16px;
+            color: var(--primary);
+        }
+    }
+
+}
+
+.getintouch {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 999px;
+
+    width: 96px;
+    height: 96px;
+
+    border: 3px solid var(--text-secondary);
+
+    transition: width var(--transition-time), border-color var(--transition-time);
+
+    padding: 24px;
+
+    @include sm {
+        width: 48px;
+        height: 48px;
+
+        padding: 12px;
+    }
+
+    &:hover {
+        width: 244px;
+        border-color: var(--primary);
+
+        @include sm {
+            width: 168px;
+        }
+
+        .getintouch-icon {
+            >.icon {
+                background-color: var(--primary) !important;
+            }
+        }
+
+        .getintouch-text {
+            color: var(--primary) !important;
+        }
+    }
+
+    &-icon {
+        margin-right: auto;
+
+        >.icon {
+            transition: background-color var(--transition-time);
+
+            @include sm {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+    }
+
+    &-text {
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        margin-bottom: 0;
+
+        z-index: -1;
+
+        transition: color var(--transition-time);
+
+        color: var(--text-secondary);
+
+    }
+
+}
