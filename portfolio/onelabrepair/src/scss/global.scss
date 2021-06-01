@@ -8,6 +8,7 @@
 @use './partials/costum';
 
 @import './mixins/breakpoints';
+@import './mixins/mixins';
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -673,5 +674,98 @@ a {
             }
         }
 
+    }
+}
+
+
+.fale-connosco {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 320px;
+    padding: 40px 0px;
+
+    display: flex;
+    align-items: center;
+
+    h1 {
+        margin-bottom: 32px !important;
+    }
+
+    &-contactos {
+        h4 {
+            margin-bottom: 8px !important;
+        }
+        >* {
+            @include sm  {
+                text-align: center;
+            }
+            
+            &:not(:last-child) {
+                margin-bottom: 16px
+            }
+        }
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+
+        padding: 32px;
+
+        background: var(--white);
+        border-radius: 8px;
+
+        >* {
+            color: var(--primary) !important;
+            padding: 8px 16px;
+
+
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+
+
+
+
+        input {
+            height: 56px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        input,
+        textarea {
+            border: 1px solid var(--text-secondary);
+            border-radius: 4px;
+
+            outline: 0 !important;
+        }
+    }
+
+    @include overlay;
+
+    * {
+        color: var(--white);
+    }
+
+
+
+
+    >img {
+        @include centerAbsolute;
+
+        min-width: 110%;
+        
+        z-index: -1;
+
+        @include sm {
+            height: 100%;
+        }
     }
 }
