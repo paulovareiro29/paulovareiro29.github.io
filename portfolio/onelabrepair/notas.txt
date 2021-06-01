@@ -1,0 +1,15 @@
+reparações:
+    reparação macbook
+    reparaçao iPad
+    reparaçao iPhone
+    reparaçao de smartphones
+    reparaçao tablet
+    reparaçao de computadores
+
+serviços:
+    recuperação de dados
+    reparações eletronicas
+    software
+    diagnostico
+    upgrades
+    hardware e perfericos

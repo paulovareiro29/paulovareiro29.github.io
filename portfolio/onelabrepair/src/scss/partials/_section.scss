@@ -95,6 +95,11 @@
                 color: var(--text-primary);
             }
 
+            ul {
+                padding-left: 32px;
+                list-style: circle;
+            }
+
             >:not(:last-child) {
                 margin-bottom: 16px !important;
             }
