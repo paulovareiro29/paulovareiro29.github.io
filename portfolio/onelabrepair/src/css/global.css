@@ -436,6 +436,7 @@
   z-index: -1;
   min-width: 100%;
   min-height: 100%;
+  max-width: 100%;
   transition: min-width var(--transition-time), min-height var(--transition-time);
 }
 .section-galeria .galeria-item > p {
