@@ -1,0 +1,68 @@
+@import '../mixins/breakpoints';
+
+
+.footer {
+    border-top: 1px solid var(--text-primary);
+    border-bottom: 1px solid var(--text-primary);
+
+    padding: 40px 0px;
+
+    >.container {
+        display: flex;
+        justify-content: space-between;
+
+        >div {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                height: 60px;
+                margin-right: 32px;
+            }
+
+            >p {
+                font-size: 16px;
+                line-height: 28px;
+                max-width: 396px;
+
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+
+        .socials {
+            display: flex;
+            gap: 32px;
+
+            @include md {
+                gap: 16px;
+            }
+
+            >a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 56px;
+                height: 56px;
+
+                border-radius: 50%;
+                border: 1px solid var(--secondary);
+            }
+        }
+    }
+}
+
+.bottom-bar {
+    padding: 20px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    span {
+        text-align: center;
+    }
+}
