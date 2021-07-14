@@ -105,6 +105,11 @@ header {
     }
 
     &-logo {
+        >img {
+            height: 60px;
+        }
+
+
         @include md {
             >img {
                 height: 48px;

@@ -77,6 +77,9 @@ header {
 .navbar > .container {
   height: 100%;
 }
+.navbar-logo > img {
+  height: 60px;
+}
 @media (max-width: 992px) {
   .navbar-logo > img {
     height: 48px;
