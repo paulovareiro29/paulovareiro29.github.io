@@ -746,6 +746,24 @@ html {
   text-align: center;
 }
 
+@font-face {
+  font-family: "eras_demi_itcregular";
+  src: url("./font/erasdemi-webfont.woff2") format("woff2"), url("./font/erasdemi-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "eras_light_itcregular";
+  src: url("./font/eraslght-webfont.woff2") format("woff2"), url("./font/eraslght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "eras_medium_itcregular";
+  src: url("./font/erasmd-webfont.woff2") format("woff2"), url("./font/erasmd-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --primary: #FFF;
   --secondary: #F2890D;
@@ -787,7 +805,7 @@ body.disable-scroll {
   height: 100vh;
 }
 body * {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "eras_demi_itcregular", "Roboto", sans-serif !important;
   color: var(--primary);
   font-size: 16px;
   line-height: 24px;

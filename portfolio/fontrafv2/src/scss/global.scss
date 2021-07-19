@@ -6,6 +6,38 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@font-face {
+    font-family: 'eras_demi_itcregular';
+    src: url('./font/erasdemi-webfont.woff2') format('woff2'),
+         url('./font/erasdemi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'eras_light_itcregular';
+    src: url('./font/eraslght-webfont.woff2') format('woff2'),
+         url('./font/eraslght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'eras_medium_itcregular';
+    src: url('./font/erasmd-webfont.woff2') format('woff2'),
+         url('./font/erasmd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --primary: #FFF;
     --secondary: #F2890D;
@@ -55,7 +87,7 @@ body {
     }
 
     * {
-        font-family: 'Roboto', sans-serif !important;
+        font-family: 'eras_demi_itcregular', 'Roboto', sans-serif !important;
         color: var(--primary);
         font-size: 16px;
         line-height: 24px;
