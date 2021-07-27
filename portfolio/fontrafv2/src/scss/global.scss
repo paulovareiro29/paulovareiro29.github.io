@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'eras_demi_itcregular';
     src: url('./font/erasdemi-webfont.woff2') format('woff2'),
-         url('./font/erasdemi-webfont.woff') format('woff');
+        url('./font/erasdemi-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -21,7 +21,7 @@
 @font-face {
     font-family: 'eras_light_itcregular';
     src: url('./font/eraslght-webfont.woff2') format('woff2'),
-         url('./font/eraslght-webfont.woff') format('woff');
+        url('./font/eraslght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -33,7 +33,7 @@
 @font-face {
     font-family: 'eras_medium_itcregular';
     src: url('./font/erasmd-webfont.woff2') format('woff2'),
-         url('./font/erasmd-webfont.woff') format('woff');
+        url('./font/erasmd-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -354,6 +354,7 @@ h6 {
 }
 
 p {
+    font-family: 'eras_medium_itcregular' !important;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
@@ -879,4 +880,164 @@ form {
             }
         }
     }
+}
+
+
+
+.product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+
+    z-index: 1050;
+
+    &::before {
+        content: '';
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+
+        background-color: #FFF;
+        opacity: .2;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    &-wrapper {
+        position: absolute;
+        top: 176px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        border-radius: 8px;
+        padding: 80px;
+
+        background: var(--neutral);
+        opacity: 100%;
+
+        display: flex;
+
+        @include md {
+            padding: 56px;
+            top: 120px
+        }
+
+        @include sm {
+            padding: 32px;
+            flex-direction: column;
+        }
+
+        @include xs {
+            padding: 24px;
+        }
+
+
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+
+
+
+        p {
+            font-size: 20px;
+
+            @include sm {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-contact {
+        margin-top: auto !important;
+
+        @include sm {
+            margin-top: 16px !important;
+        }
+
+        >a {
+            font-family: 'eras_medium_itcregular' !important;
+        }
+    }
+
+    &-info {
+        >p {
+            &:not(:last-child) {
+                margin-bottom: 8px !important;
+
+                @include sm {
+                    margin-bottom: 4px !important;
+                }
+            }
+
+            >span {
+                font-family: 'eras_medium_itcregular' !important;
+                font-size: 16px;
+                font-weight: 500;
+
+                @include sm {
+                    font-size: 14px;
+                }
+
+            }
+        }
+    }
+
+    &-image {
+        width: 260px;
+        height: 260px;
+
+        border-radius: 8px;
+        background: var(--background-tertiary);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-right: 40px;
+
+        >img {
+            min-width: 100%;
+        }
+
+        @include sm {
+            width: 196px;
+            height: 196px;
+
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+    }
+
+    &-name {
+        position: relative;
+        font-size: 32px;
+
+        margin-bottom: 27px !important;
+
+        &::after {
+            content: '';
+            position: absolute;
+
+            bottom: -8px;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        @include sm {
+            font-size: 24px;
+        }
+    }
+
+
 }

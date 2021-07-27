@@ -52,6 +52,26 @@ $(document).ready(() => {
  */
 /** LOADING FUNCTIONS */
 function loadProducts() {
+  $(".product-modal").hide();
+
+  function resetProductModal() {
+    let modal = $(".product-modal");
+    $(modal).find(".product-modal-image img").attr("src", "");
+    $(modal).find(".product-modal-name").html("404 NOT FOUND");
+    $(modal).find(".product-modal-brand").show();
+    $(modal).find(".product-modal-brand-text").html("404 NOT FOUND");
+    $(modal).find(".product-modal-model").show();
+    $(modal).find(".product-modal-model-text").html("404 NOT FOUND");
+  }
+
+  resetProductModal();
+  $(".product-modal").click((e) => {
+    if (e.target.className == "product-modal") {
+      $(e.target).hide();
+      resetProductModal();
+    }
+  });
+
   $(".product .content").hide();
 
   $(".product").each(function (key, element) {
@@ -74,6 +94,43 @@ function loadProducts() {
       }
     );
   });
+
+  $(".single-product").each(function (key, element) {
+    $(element).click(() => {
+      let product = {
+        name: $(element).attr("data-name"),
+        brand: $(element).attr("data-brand") || false,
+        model: $(element).attr("data-model") || false,
+        image: $(element).attr("data-image"),
+      };
+
+      let modal = $(".product-modal");
+
+      //IMAGE
+      $(modal).find(".product-modal-image img").attr("src", product.image);
+
+      //NAME
+      $(modal).find(".product-modal-name").html(product.name);
+
+      //BRAND
+      if (product.brand) {
+        $(modal).find(".product-modal-brand-text").html(product.brand);
+        $(modal).find(".product-modal-brand").show();
+      } else {
+        $(modal).find(".product-modal-brand").hide();
+      }
+
+      //MODEL
+      if (product.model) {
+        $(modal).find(".product-modal-model-text").html(product.model);
+        $(modal).find(".product-modal-model").show();
+      } else {
+        $(modal).find(".product-modal-model").hide();
+      }
+
+      $(modal).show();
+    });
+  });
 }
 
 function loadHeader() {
@@ -91,9 +148,7 @@ function loadHeader() {
   });
 
   $(".mobile-menu .menu-item").click((e) => {
-    const button = $(e.target)
-      .parents(".navbar")
-      .find(".mobile-menu-trigger");
+    const button = $(e.target).parents(".navbar").find(".mobile-menu-trigger");
 
     console.log(button);
 
