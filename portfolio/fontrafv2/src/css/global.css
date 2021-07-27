@@ -1539,8 +1539,14 @@ form select {
     margin-top: 16px !important;
   }
 }
+.product-modal-contact > p {
+  font-family: "eras_demi_itcregular" !important;
+}
 .product-modal-contact > a {
   font-family: "eras_medium_itcregular" !important;
+}
+.product-modal-info > p {
+  font-family: "eras_demi_itcregular" !important;
 }
 .product-modal-info > p:not(:last-child) {
   margin-bottom: 8px !important;

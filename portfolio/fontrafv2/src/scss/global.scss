@@ -963,6 +963,11 @@ form {
             margin-top: 16px !important;
         }
 
+        >p {
+            font-family: 'eras_demi_itcregular' !important;
+
+        }
+
         >a {
             font-family: 'eras_medium_itcregular' !important;
         }
@@ -970,6 +975,8 @@ form {
 
     &-info {
         >p {
+            font-family: 'eras_demi_itcregular' !important;
+
             &:not(:last-child) {
                 margin-bottom: 8px !important;
 
