@@ -11,7 +11,7 @@ function loadTechnologies() {
     $(element)
       .addClass("animated")
       .attr("data-animation", "fadeInUp")
-      .attr("data-delay", `${key * 200 + 1000}`);
+      .attr("data-delay", `${key * 200 + 50}`);
   });
 }
 
@@ -26,7 +26,7 @@ function loadProjects() {
     $(element)
       .addClass("animated")
       .attr("data-animation", "fadeInUp")
-      .attr("data-delay", `${key * 250 + 1000}`);
+      .attr("data-delay", `${key * 250 + 100}`);
   });
 }
 
@@ -56,11 +56,12 @@ function loadAnimations() {
     (key, element) => {
       const text = $(element).attr("data-value");
       const parentDelay = parseInt($(element).attr("data-delay")) || 0;
+      const speed = parseInt($(element).attr("data-animation-speed")) || 0;
 
       for (let i = 0; i < text.length; i++) {
         $(element).append(
           `<span data-letter-count="${i}" data-delay="${
-            (i + 1) * 100 + parentDelay
+            (i + 1) * speed + parentDelay
           }" class="animated" data-animation="letter-slide-in">${
             text[i] == " " ? "&nbsp" : text[i]
           }</span>`
@@ -80,9 +81,9 @@ function loadAnimations() {
       let bottomOfScreen = $(window).scrollTop() + $(window).innerHeight();
       let topOfScreen = $(window).scrollTop();
 
-      if(topOfScreen > bottomOfElement){
-        $(element).attr("data-delay",0).PVAnimate()
-        return
+      if (topOfScreen > bottomOfElement) {
+        $(element).attr("data-delay", 0).PVAnimate();
+        return;
       }
 
       if (bottomOfScreen > topOfElement && topOfScreen < bottomOfElement) {
