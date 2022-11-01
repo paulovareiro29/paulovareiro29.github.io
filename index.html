@@ -1,277 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- STYLES -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/global.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/css/global.css" />
 
     <!-- SCRIPTS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWD0QRX0DR"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KWD0QRX0DR"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-KWD0QRX0DR');
+      gtag("config", "G-KWD0QRX0DR");
     </script>
 
     <title>Paulo Vareiro</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header id="header" class="animated" data-animation="fadeInUp">
-        <div id="main-header" class=" main-header">
-            <div class="container">
-                <div class="header">
-                    <a href="/">Paulo Vareiro</a>
-                    <nav class="only-desktop">
-                        <a href="#about">About</a>
-                        <a href="#work">Work</a>
-                        <a href="#contacts">Contacts</a>
-                    </nav>
+      <div id="main-header" class="main-header">
+        <div class="container">
+          <div class="header">
+            <a href="/">Paulo Vareiro</a>
+            <nav class="only-desktop">
+              <a href="#about">About</a>
+              <a href="#work">Work</a>
+              <a href="#contacts">Contacts</a>
+            </nav>
 
-                    <button href="#" class="button button-nHW mobile-menu-trigger only-mobile"><span
-                            class="icon icon-menu"></span></button>
-                </div>
-            </div>
-
+            <button
+              href="#"
+              class="button button-nHW mobile-menu-trigger only-mobile"
+            >
+              <span class="icon icon-menu"></span>
+            </button>
+          </div>
         </div>
-        <div id="mobile-navigation" class="mobile-navigation only-mobile">
-            <div class="container">
-                <div class="header">
-                    <nav>
-                        <a href="#about">About</a>
-                        <a href="#work">Work</a>
-                        <a href="#contacts">Contacts</a>
-                    </nav>
-                    <button href="#" class="button button-nHW mobile-menu-trigger"><span
-                            class="icon icon-close"></span></button>
-                </div>
-            </div>
-
-
+      </div>
+      <div id="mobile-navigation" class="mobile-navigation only-mobile">
+        <div class="container">
+          <div class="header">
+            <nav>
+              <a href="#about">About</a>
+              <a href="#work">Work</a>
+              <a href="#contacts">Contacts</a>
+            </nav>
+            <button href="#" class="button button-nHW mobile-menu-trigger">
+              <span class="icon icon-close"></span>
+            </button>
+          </div>
         </div>
+      </div>
     </header>
 
-
     <main id="main">
-        <section id="landing" class="section section-fullpage section-landing">
-            <p class="section-landing-background-text">&lt; code /&gt;</p>
-            <div class="container landing-content">
-                <h3 class="animated" data-delay="600" data-animation="fadeInUp">Hi there! <img class="icon icon-emoji"
-                        src="src/images/icons/waving-hand.svg" alt=""></h3>
-                <h1 class="animated" data-delay="1300" data-animation="letters-slide-in" data-value="I'm a developer.">
-                </h1>
+      <section id="landing" class="section section-fullpage section-landing">
+        <p class="section-landing-background-text">&lt; code /&gt;</p>
+        <div class="container landing-content">
+          <h3 class="animated" data-delay="300" data-animation="fadeInUp">
+            Hi there!
+            <img
+              class="icon icon-emoji"
+              src="src/images/icons/waving-hand.svg"
+              alt=""
+            />
+          </h3>
+          <h1
+            class="animated"
+            data-delay="500"
+            data-animation="letters-slide-in"
+            data-value="I'm a developer."
+          ></h1>
 
-                <a href="mailto:paulovareiro29@gmail.com" class="button button-primary hover-animation animated"
-                    data-delay="3200" data-animation="fadeInUp">Contact me</a>
+          <a
+            href="mailto:paulovareiro29@gmail.com"
+            class="button button-primary hover-animation animated"
+            data-delay="2000"
+            data-animation="fadeInUp"
+            >Contact me</a
+          >
 
+          <div class="landing-socials">
+            <div class="animated" data-delay="2300" data-animation="fadeInUp">
+              <a href="#" target="_blank" class="icon-hover hover-animation">
+                <span class="icon icon-instagram bg-text-secondary"></span>
+              </a>
+            </div>
+            <div class="animated" data-delay="2600" data-animation="fadeInUp">
+              <a
+                href="https://www.linkedin.com/in/paulo-vareiro-5701451b2/"
+                target="_blank"
+                class="icon-hover hover-animation"
+              >
+                <span class="icon icon-linkedin bg-text-secondary"></span>
+              </a>
+            </div>
+            <div class="animated" data-delay="2900" data-animation="fadeInUp">
+              <a
+                href="https://github.com/paulovareiro29"
+                target="_blank"
+                class="icon-hover hover-animation"
+              >
+                <span class="icon icon-github bg-text-secondary"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                <div class="landing-socials">
-                    <div class="animated" data-delay="3200" data-animation="fadeInUp">
-                        <a href="#" class="icon-hover hover-animation">
-                            <span class="icon icon-instagram bg-text-secondary"></span>
-                        </a>
-                    </div>
-                    <div class="animated" data-delay="3500" data-animation="fadeInUp">
-                        <a href="https://www.linkedin.com/in/paulo-vareiro-5701451b2/" class="icon-hover hover-animation">
-                            <span class="icon icon-linkedin bg-text-secondary"></span>
-                        </a>
-                    </div>
+      <section id="about" class="section section-about">
+        <div class="container">
+          <h3 class="animated" data-delay="100" data-animation="fadeInUp">
+            About
+            <img
+              class="icon icon-emoji"
+              src="src/images/icons/man.svg"
+              alt=""
+            />
+          </h3>
+          <h2 class="animated" data-delay="300" data-animation="fadeInUp">
+            Who am I?
+          </h2>
 
+          <div class="about-content row">
+            <div
+              class="col-12 col-md-10 col-lg-7 d-flex flex-column align-items-start"
+            >
+              <p
+                class="color-text-secondary animated"
+                data-delay="800"
+                data-animation="fadeInUp"
+              >
+                My name is Paulo and I love coding. My interest started when I
+                was around 15, developing small programs in Java which I would
+                get very excited about.
+              </p>
 
+              <p
+                class="color-text-secondary animated"
+                data-delay="1100"
+                data-animation="fadeInUp"
+              >
+                Fast-forward to today,and i’m a hard-working developer with a
+                flair for creating pixel perfect websites, studying at the
+                Polytechnic Institute of Viana do Castelo, taking a bachelors
+                degree on Software Engineering and also doing some freelancing
+                on the side.
+              </p>
 
-                </div>
+              <a
+                href="#"
+                class="button button-primary hover-animation animated"
+                data-delay="1400"
+                data-animation="fadeInUp"
+                >Resume</a
+              >
+            </div>
+            <div class="background-icon col-lg-5">
+              <img src="src/images/icons/person_square.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section section-work">
+        <div class="container">
+          <h3 class="animated" data-delay="100" data-animation="fadeInUp">
+            Work
+            <img
+              class="icon icon-emoji"
+              src="src/images/icons/laptop.svg"
+              alt=""
+            />
+          </h3>
+          <h2 class="animated" data-delay="300" data-animation="fadeInUp">
+            Some of my work
+          </h2>
+
+          <div class="projects-grid">
+            <a
+              href="https://onelabrepair.pt"
+              target="_blank"
+              class="project"
+              data-color="#FFCC01"
+            >
+              <span class="project-color"></span>
+              <h6>Onelabrepair</h6>
+              <p>
+                An website made for an eletronics repair store located in
+                Lisbon, Portugal.
+              </p>
+
+              <div class="project-link">
+                <span class="color-primary">Click me!</span>
+              </div>
+            </a>
+
+            <a
+              href="/portfolio/fontrafv2/"
+              target="_blank"
+              class="project"
+              data-color="#F2890D"
+            >
+              <span class="project-color"></span>
+              <h6>Fontraf</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
+                bibendum posuere ante vitae.
+              </p>
+
+              <div class="project-link">
+                <span class="color-primary">Click me!</span>
+              </div>
+            </a>
+
+            <a
+              href="/curriculum"
+              target="_blank"
+              class="project"
+              data-color="#00BAE3"
+            >
+              <span class="project-color"></span>
+              <h6>Curriculums Builder</h6>
+              <p>A school project using php to build your own curriculum.</p>
+
+              <div class="project-link">
+                <span class="color-primary">Click me!</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-skills">
+        <div class="container">
+          <h3 class="animated" data-delay="100" data-animation="fadeInUp">
+            Skills
+            <img
+              class="icon icon-emoji"
+              src="src/images/icons/biceps.svg"
+              alt=""
+            />
+          </h3>
+          <h2 class="animated" data-delay="300" data-animation="fadeInUp">
+            Technologies I've used
+          </h2>
+
+          <div class="skills-grid">
+            <div class="skill">
+              <div class="skill-image">
+                <img src="src/images/skills/js.png" alt="" />
+              </div>
+              <p class="skill-name">JavaScript</p>
             </div>
 
-        </section>
-
-        <section id="about" class="section section-about">
-            <div class="container">
-                <h3 class="animated" data-delay="400" data-animation="fadeInUp">About <img class="icon icon-emoji"
-                        src="src/images/icons/man.svg" alt=""></h3>
-                <h2 class="animated" data-delay="600" data-animation="fadeInUp">Who am I?</h2>
-
-                <div class="about-content row">
-                    <div class="col-12 col-md-10 col-lg-7 d-flex flex-column align-items-start">
-                        <p class="color-text-secondary animated" data-delay="1100" data-animation="fadeInUp">My name is
-                            Paulo and I love coding. My interest started when I
-                            was
-                            around 15, developing small
-                            programs in Java which I would get very excited about.</p>
-
-                        <p class="color-text-secondary animated" data-delay="1400" data-animation="fadeInUp">
-                            Fast-forward to today,and i’m a hard-working developer with a
-                            flair
-                            for creating pixel perfect
-                            websites, studying at the Polytechnic Institute of Viana do Castelo, taking a bachelors degree on Software Engineering and also
-                            doing some freelancing on the side.</p>
-
-                        <a href="#" class="button button-primary hover-animation animated" data-delay="1700"
-                            data-animation="fadeInUp">Resume</a>
-                    </div>
-                    <div class="background-icon col-lg-5"><img src="src/images/icons/person_square.svg" alt=""></div>
-                </div>
+            <div class="skill">
+              <div class="skill-image">
+                <img src="src/images/skills/html.png" alt="" />
+              </div>
+              <p class="skill-name">HTML</p>
             </div>
-        </section>
 
-        <section id="work" class="section section-work">
-            <div class="container">
-                <h3 class="animated" data-delay="400" data-animation="fadeInUp">Work <img class="icon icon-emoji"
-                        src="src/images/icons/laptop.svg" alt=""></h3>
-                <h2 class="animated" data-delay="600" data-animation="fadeInUp">Some of my work</h2>
-
-                <div class="projects-grid">
-                    <a href="https://onelabrepair.pt" class="project" data-color="#FFCC01">
-                        <span class="project-color"></span>
-                        <h6>Onelabrepair</h6>
-                        <p>An website made for an eletronics repair store located in Lisbon, Portugal.</p>
-
-                        <div class="project-link">
-                            <span class="color-primary">Click me!</span>
-                        </div>
-                    </a>
-
-                    <a href="/portfolio/fontrafv2/" class="project" data-color="#F2890D">
-                        <span class="project-color"></span>
-                        <h6>Fontraf</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non bibendum posuere ante vitae.</p>
-
-                        <div class="project-link">
-                            <span class="color-primary">Click me!</span>
-                        </div>
-                    </a>
-
-                    <a href="#" class="project" data-color="#00BAE3">
-                        <span class="project-color"></span>
-                        <h6>Ipsum Lorem</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non bibendum posuere ante vitae.</p>
-
-                        <div class="project-link">
-                            <span class="color-primary">Click me!</span>
-                        </div>
-                    </a>
-                </div>
+            <div class="skill">
+              <div class="skill-image">
+                <img src="src/images/skills/css.png" alt="" />
+              </div>
+              <p class="skill-name">CSS</p>
             </div>
-        </section>
 
-        <section id="skills" class="section section-skills">
-            <div class="container">
-                <h3 class="animated" data-delay="400" data-animation="fadeInUp">Skills <img class="icon icon-emoji"
-                        src="src/images/icons/biceps.svg" alt=""></h3>
-                <h2 class="animated" data-delay="600" data-animation="fadeInUp">Technologies I've used</h2>
-
-                <div class="skills-grid">
-                    <div class="skill">
-                        <div class="skill-image">
-                            <img src="src/images/skills/js.png" alt="">
-                        </div>
-                        <p class="skill-name">JavaScript</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-image">
-                            <img src="src/images/skills/html.png" alt="">
-                        </div>
-                        <p class="skill-name">HTML</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-image">
-                            <img src="src/images/skills/css.png" alt="">
-                        </div>
-                        <p class="skill-name">CSS</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-image">
-                            <img src="src/images/skills/sass.png" alt="">
-                        </div>
-                        <p class="skill-name">SASS</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-image">
-                            <img src="src/images/skills/php.png" alt="">
-                        </div>
-                        <p class="skill-name">PHP</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-image">
-                            <img src="src/images/skills/mysql.png" alt="">
-                        </div>
-                        <p class="skill-name">MySQL</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-image">
-                            <img src="src/images/skills/react.png" alt="">
-                        </div>
-                        <p class="skill-name">ReactJS</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-image">
-                            <img src="src/images/skills/node.png" alt="">
-                        </div>
-                        <p class="skill-name">NodeJS</p>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-image">
-                            <img src="src/images/skills/java.png" alt="">
-                        </div>
-                        <p class="skill-name">Java</p>
-                    </div>
-                </div>
+            <div class="skill">
+              <div class="skill-image">
+                <img src="src/images/skills/sass.png" alt="" />
+              </div>
+              <p class="skill-name">SASS</p>
             </div>
-        </section>
 
-        <section id="contacts" class="section section-contacts">
-            <div class="container">
-                <h3 class="animated" data-delay="400" data-animation="fadeInUp">Contacts</h3>
-                <h2 class="animated" data-delay="600" data-animation="fadeInUp">Reach me out!</h2>
-
-                <p class="animated" data-delay="1000" data-animation="fadeInUp">My inbox is always open! Whether you have a question or just want to say hi, I’ll get back to you!</p>
-           
-                <a href="mailto:paulovareiro29@gmail.com" id="getintouch" class="getintouch animated" data-delay="1300" data-animation="fadeInUp">
-                    <div class="getintouch-icon">
-                        <span class="icon icon-lg icon-envelope bg-text-secondary"></span>
-                    </div>
-                    <p class="getintouch-text">Get In Touch</p>
-                </a>
+            <div class="skill">
+              <div class="skill-image">
+                <img src="src/images/skills/php.png" alt="" />
+              </div>
+              <p class="skill-name">PHP</p>
             </div>
-        </section>
+
+            <div class="skill">
+              <div class="skill-image">
+                <img src="src/images/skills/mysql.png" alt="" />
+              </div>
+              <p class="skill-name">MySQL</p>
+            </div>
+
+            <div class="skill">
+              <div class="skill-image">
+                <img src="src/images/skills/react.png" alt="" />
+              </div>
+              <p class="skill-name">ReactJS</p>
+            </div>
+
+            <div class="skill">
+              <div class="skill-image">
+                <img src="src/images/skills/node.png" alt="" />
+              </div>
+              <p class="skill-name">NodeJS</p>
+            </div>
+
+            <div class="skill">
+              <div class="skill-image">
+                <img src="src/images/skills/java.png" alt="" />
+              </div>
+              <p class="skill-name">Java</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section section-contacts">
+        <div class="container">
+          <h3 class="animated" data-delay="100" data-animation="fadeInUp">
+            Contacts
+          </h3>
+          <h2 class="animated" data-delay="300" data-animation="fadeInUp">
+            Reach me out!
+          </h2>
+
+          <p class="animated" data-delay="700" data-animation="fadeInUp">
+            My inbox is always open! Whether you have a question or just want to
+            say hi, I’ll get back to you!
+          </p>
+
+          <a
+            href="mailto:paulovareiro29@gmail.com"
+            id="getintouch"
+            class="getintouch animated"
+            data-delay="1000"
+            data-animation="fadeInUp"
+          >
+            <div class="getintouch-icon">
+              <span class="icon icon-lg icon-envelope bg-text-secondary"></span>
+            </div>
+            <p class="getintouch-text">Get In Touch</p>
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container footer">
-            <span>Paulo Vareiro © All rights reserved</span>
+      <div class="container footer">
+        <span>Paulo Vareiro © All rights reserved</span>
 
-            <div class="footer-socials">
-                <a href="mailto:paulovareiro29@gmail.com"><span class="icon icon-envelope"></span></a>
-                <a href="#"><span class="icon icon-instagram"></span></a>
-                <a href="https://www.linkedin.com/in/paulo-vareiro-5701451b2/"><span class="icon icon-linkedin"></span></a>
-            </div>
+        <div class="footer-socials">
+          <a href="mailto:paulovareiro29@gmail.com"
+            ><span class="icon icon-envelope"></span
+          ></a>
+          <a href="#" target="_blank"
+            ><span class="icon icon-instagram"></span
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/paulo-vareiro-5701451b2/"
+            target="_blank"
+            ><span class="icon icon-linkedin"></span
+          ></a>
+          <a href="https://github.com/paulovareiro29" target="_blank"
+            ><span class="icon icon-github"></span
+          ></a>
         </div>
+      </div>
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
     <script src="src/js/jquery.js"></script>
     <script src="src/js/global.js"></script>
-</body>
-
+  </body>
 </html>
